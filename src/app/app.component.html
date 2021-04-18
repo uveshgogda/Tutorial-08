@@ -1,12 +1,12 @@
 <mat-toolbar *ngIf="this._authService.isLoggedIn()" color="primary" class="navbar">
-    <div>Bhargav Laiya - 19SOECE13022</div>
-    <div>
-        <a *ngIf="this._authService.isLoggedIn()" (click)="logout()" class="btn btn-light ml-2"><i
+  <div>Uvesh Gogda - 19SOECE13029</div>
+  <div>
+    <a *ngIf="this._authService.isLoggedIn()" (click)="logout()" class="btn btn-light ml-2"><i
                 class="fa fa-sign-out" aria-hidden="true"></i> </a>
-    </div>
+  </div>
 </mat-toolbar>
 <div *ngIf="this._authService.isLoading | async">
-    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 </div>
 
 <router-outlet></router-outlet>
