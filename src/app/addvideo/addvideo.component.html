@@ -1,0 +1,56 @@
+<div class="wrapper">
+    <div id="formContent">
+    <h2>Add Video</h2>
+
+      <form [formGroup]="videoForm" (ngSubmit)="postVideo()" class="form-group p-2" >
+        <div class="row">
+          <div class="col-sm-12 col-lg-6 col-md-6">
+            <div class="form-group mt-2">
+              <input type="text" formControlName="title"  [ngClass]="{ 'is-invalid': submitted && f.title.errors }" class="form-control" required="required" placeholder="Title" />
+              <div *ngIf="submitted && f.title.errors" class="invalid-feedback" style="text-align: left;">
+                <div *ngIf="f.title.errors.required">Title is required</div>
+              </div>
+            </div>
+            <div class="form-group mt-2">
+              <input type="text" formControlName="desc"  [ngClass]="{ 'is-invalid': submitted && f.desc.errors }" class="form-control" required="required" placeholder="Description" />
+              <div *ngIf="submitted && f.desc.errors" class="invalid-feedback" style="text-align: left;">
+                <div *ngIf="f.desc.errors.required">Description is required</div>
+              </div>
+            </div>
+            <div class="form-group mt-2">
+              <input type="text" formControlName="posted_by"  [ngClass]="{ 'is-invalid': submitted && f.posted_by.errors }" class="form-control" required="required" placeholder="Posted By" />
+              <div *ngIf="submitted && f.posted_by.errors" class="invalid-feedback" style="text-align: left;">
+                <div *ngIf="f.posted_by.errors.required">Posted By is required</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-6 col-md-6">
+            <div class="form-group mt-2">
+              <input type="text" formControlName="cat"  [ngClass]="{ 'is-invalid': submitted && f.cat.errors }" class="form-control" required="required" placeholder="Category" />
+              <div *ngIf="submitted && f.cat.errors" class="invalid-feedback" style="text-align: left;">
+                <div *ngIf="f.cat.errors.required">Category is required</div>
+              </div>
+            </div>
+            <div class="form-group mt-2">
+              <input type="number" formControlName="likes"  [ngClass]="{ 'is-invalid': submitted && f.likes.errors }" class="form-control" required="required" placeholder="Likes" />
+              <div *ngIf="submitted && f.likes.errors" class="invalid-feedback" style="text-align: left;">
+                <div *ngIf="f.likes.errors.required">Likes is required</div>
+              </div>
+            </div>
+            <div class="form-group mt-2">
+              <input type="text" formControlName="url"  [ngClass]="{ 'is-invalid': submitted && f.url.errors }" class="form-control" required="required" placeholder="Url" />
+              <div *ngIf="submitted && f.url.errors" class="invalid-feedback" style="text-align: left;">
+                <div *ngIf="f.url.errors.required">Url is required</div>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+
+        <button type="submit" class="form-control btn btn-outline-primary ">Add !</button>
+      </form>
+      <div id="formFooter">
+        <a class="underlineHover" routerLink="/videos">Cancel !</a>
+      </div>
+    </div>
+  </div> 
